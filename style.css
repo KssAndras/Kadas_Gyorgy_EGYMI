@@ -1,0 +1,188 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+.welcome {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #2c3e50;
+}
+
+.welcome {
+  background-image: url(Kepek/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 200px;
+  text-shadow: 0 0 3px #2c3e50;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+/* Adjustments for iPhone 6 */
+@media only screen and (max-device-width: 375px) {
+  .logo {
+    width: 300px; /* Adjust logo size */
+    margin-top: 10px; /* Increase top margin */
+    margin-left: 10px; /* Adjust left margin */
+  }
+  .welcome h1 {
+    font-size: 2rem;
+  }
+
+  .checkbtn {
+    margin-right: 5px; /* Adjust margin for hamburger menu */
+  }
+}
+
+footer {
+  font-size: 0.6rem;
+  line-height: 15px;
+  background-color: #477f99cd;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  width: 100%;
+  bottom: 0;
+  transition: bottom 0.1s ease-in;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+.greeting {
+  background-color: #fff;
+  padding-top: 100px;
+  padding: 80px;
+}
+.greeting img {
+  width: 200px;
+  float: left;
+  padding: 0px 5px 5px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px gray;
+}
+
+.greeting h1 {
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  text-shadow: 1px 1px white;
+  padding-bottom: 50px;
+}
+
+.greeting p {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  text-align: justify;
+  letter-spacing: -0.1px;
+  line-height: 150%;
+}
+
+#kvote {
+  text-align: right;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+#signature {
+  text-align: right;
+  margin-top: 30px;
+}
+
+#kvote2 {
+  font-style: italic;
+}
+
+.content {
+  background-color: #ffffffcd;
+  height: fit-content;
+  padding: 0 50px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  flex: 1;
+  padding-top: 100px;
+}
+.content h1 {
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px #477f99;
+  padding-bottom: 50px;
+}
+
+.content h2 {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.content p {
+  margin: 20px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  text-align: justify;
+  letter-spacing: -0.1px;
+  line-height: 150%;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#author {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+.felsorolas li {
+  list-style-type: disc;
+  text-align: left;
+  margin-left: 80px;
+}
