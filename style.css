@@ -94,7 +94,7 @@ main {
 }
 @media (max-width: 768px) {
   .greeting img {
-    width: 100px; /* Kép szélessége mobil nézetben */
+    width: 90px; /* Kép szélessége mobil nézetben */
   }
 }
 
@@ -146,7 +146,7 @@ aside a {
 
 @media (max-width: 768px) {
   aside img {
-    width: 90px; /* Kép szélessége mobil nézetben */
+    width: 80px; /* Kép szélessége mobil nézetben */
     padding: 5px; /* Belülről távolság hozzáadása */
   }
   aside h3 {
