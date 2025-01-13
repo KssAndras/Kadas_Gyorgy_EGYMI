@@ -3,6 +3,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Fontos: Padding és border beleszámít a méretbe */
+}
+
+html,
+body {
+  overflow-x: hidden; /* Megakadályozza a vízszintes görgetést */
 }
 
 body {
@@ -156,10 +162,9 @@ footer {
 
 @media (max-width: 800px) {
   body {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto auto;
   }
   aside {
-    padding: 4%;
-    text-align: justify;
+    padding: 10%;
   }
 }
