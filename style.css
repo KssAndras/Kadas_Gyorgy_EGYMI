@@ -70,15 +70,28 @@ nav a:hover {
 
 main {
   grid-area: main;
-  padding: 4%;
 }
-
+.welcome img {
+  width: 100%; /* A kép szélessége kitölti a szülőt */
+  height: auto; /* Magasság automatikusan igazodik, hogy megőrizze az arányokat */
+}
 .welcome h1 {
   font-size: 2rem;
   text-align: center;
 }
 
+#efop {
+  display: flex; /* Flexbox bekapcsolása */
+  justify-content: center; /* Kép középre igazítása vízszintesen */
+  align-items: center; /* Ha szükséges, függőleges középre igazítás */
+  width: 70%; /* A szülő konténer szélessége teljes legyen */
+  margin: 20px auto; /* Középre helyezés a szülő konténerben */
+  border: solid 1px; /* Keret */
+  display: block; /* Biztosítás, hogy a kép blokkszintű legyen */
+}
+
 .greeting {
+  padding: 4%;
   background-color: #fff;
   padding-top: 100px;
 }
