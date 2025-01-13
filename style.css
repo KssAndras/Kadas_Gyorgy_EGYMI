@@ -16,6 +16,14 @@ body {
     "footer footer";
 }
 
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: auto 120px;
+  }
+  aside {
+    padding: 10%;
+  }
+}
 /* NAVBÁR */
 
 nav {
@@ -178,17 +186,15 @@ aside a {
 
 /* FOOTER */
 footer {
+  border-top: 1px solid #2c3e5063;
   grid-area: footer;
-  background: black;
+  font-size: 0.8rem;
+  line-height: 15px;
+  background-color: rgb(202, 167, 114);
   color: white;
-  padding: 2em;
-}
-
-@media (max-width: 768px) {
-  body {
-    grid-template-columns: auto 120px;
-  }
-  aside {
-    padding: 10%;
-  }
+  text-align: center;
+  padding: 5px 0;
+  width: 100%;
+  bottom: 0;
+  transition: bottom 0.1s ease-in;
 }
