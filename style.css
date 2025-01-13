@@ -146,8 +146,8 @@ aside a {
 
 @media (max-width: 768px) {
   aside img {
-    width: 100px; /* Kép szélessége mobil nézetben */
-    padding: 10px; /* Belülről távolság hozzáadása */
+    width: 80px; /* Kép szélessége mobil nézetben */
+    padding: 5px; /* Belülről távolság hozzáadása */
   }
   aside h3 {
     font-size: 0.8rem;
