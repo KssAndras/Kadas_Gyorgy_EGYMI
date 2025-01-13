@@ -1,95 +1,76 @@
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-}
-
-.welcome {
-  color: #fff;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center; /* Vertically center */
-  height: 100vh;
-}
+/* ÁLTALÁNOS */
 
 * {
-  padding: 0;
   margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
+  padding: 0;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  color: #2c3e50;
-}
-
-.welcome {
-  background-image: url(Kepek/background.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
   min-height: 100vh;
-  padding-top: 200px;
-  text-shadow: 0 0 3px #2c3e50;
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "navbar navbar"
+    "main sidebar"
+    "footer footer";
 }
 
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
+/* NAVBÁR */
+
+nav {
+  top: 0;
+  position: sticky;
+  grid-area: navbar;
+  background-color: rgb(202, 167, 114);
+  display: flex; /* Flexbox bekapcsolása */
+  justify-content: center; /* Elemek középre igazítása vízszintesen */
+  align-items: center; /* Függőleges középre igazítás */
+  padding: 10px; /* Belülről távolság hozzáadása */
+  gap: 5px; /* Az elemek közötti távolság szabályozása */
+}
+
+nav a {
+  text-decoration: none; /* Linkek aláhúzásának eltávolítása */
+  color: white; /* Szöveg színe */
+  padding: 5px 10px; /* Belülről távolság hozzáadása */
+  border-radius: 5px; /* Lekerekített sarkok */
+  transition: background-color 0.3s ease; /* Simább hover effekt */
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Hover effekt */
+}
+/* Mobil változat */
+@media (max-width: 1100px) {
+  nav {
+    width: 100%;
+    flex-direction: column; /* Elemek egymás alá kerülnek */
+    gap: 2px; /* Kisebb távolság az elemek között */
+  }
+
+  nav a {
+    padding: 2px; /* Nagyobb méretű linkek mobilon */
+    text-align: center; /* Szöveg középre igazítása */
   }
 }
 
-/* Adjustments for iPhone 6 */
-@media only screen and (max-device-width: 375px) {
-  .logo {
-    width: 300px; /* Adjust logo size */
-    margin-top: 10px; /* Increase top margin */
-    margin-left: 10px; /* Adjust left margin */
-  }
-  .welcome h1 {
-    font-size: 2rem;
-  }
+/* MAIN BODY */
 
-  .checkbtn {
-    margin-right: 5px; /* Adjust margin for hamburger menu */
-  }
+main {
+  grid-area: main;
+  padding: 4%;
 }
 
-footer {
-  font-size: 0.6rem;
-  line-height: 15px;
-  background-color: #477f99cd;
-  color: white;
-  text-align: center;
-  padding: 5px 0;
-  width: 100%;
-  bottom: 0;
-  transition: bottom 0.1s ease-in;
-}
-
-.footer-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.footer-content p {
-  margin: 5px 0;
-}
 .greeting {
   background-color: #fff;
   padding-top: 100px;
-  padding: 80px;
 }
 .greeting img {
-  width: 200px;
-  float: left;
+  width: 400px;
+  float: right;
   padding: 0px 5px 5px;
-  margin-right: 40px;
+  margin-left: 40px;
   margin-bottom: 20px;
   border-radius: 25px;
   overflow: hidden;
@@ -112,77 +93,73 @@ footer {
   letter-spacing: -0.1px;
   line-height: 150%;
 }
+@media (max-width: 768px) {
+  .greeting img {
+    width: 100px; /* Kép szélessége mobil nézetben */
+  }
+}
 
-#kvote {
+.kvote {
   text-align: right;
   margin-bottom: 30px;
   font-style: italic;
 }
 
-#signature {
-  text-align: right;
-  margin-top: 30px;
+.signature {
+  text-align: right !important;
+  margin-top: 10px;
 }
 
-#kvote2 {
+.kvote2 {
   font-style: italic;
 }
 
-.content {
-  background-color: #ffffffcd;
-  height: fit-content;
-  padding: 0 50px;
-  padding-top: 20px;
-  text-align: center;
-  font-size: 1.2rem;
-  flex: 1;
-  padding-top: 100px;
+/* JOBBOLDALI SÁV */
+
+aside {
+  grid-area: sidebar;
+  background-color: rgba(128, 128, 128, 0.288);
+  padding: 4%;
+  border-left: solid 0.5px #2c3e503a;
 }
-.content h1 {
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 1px 1px #477f99;
-  padding-bottom: 50px;
+aside hr {
+  border: none;
+  height: 1px;
+  background-color: #2c3e50;
+  margin-bottom: 10px;
 }
 
-.content h2 {
-  text-align: left;
-  margin-left: 20px;
+aside img {
+  width: 200px;
+  padding: 12px; /* Belülről távolság hozzáadása */
 }
 
-.content p {
-  margin: 20px;
-  margin-left: 20px;
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-  text-align: justify;
-  letter-spacing: -0.1px;
-  line-height: 150%;
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-#author {
-  text-align: right;
+aside a {
+  text-decoration: none; /* Linkek aláhúzásának eltávolítása */
+  color: rgb(20, 18, 121); /* Szöveg színe */
 }
 
-@media screen and (max-width: 768px) {
-  footer p {
-    font-size: 0.8rem;
+@media (max-width: 768px) {
+  aside img {
+    width: 100px; /* Kép szélessége mobil nézetben */
+    padding: 10px; /* Belülről távolság hozzáadása */
   }
 }
 
-@media (max-width: 1100px) {
-  footer p {
-    font-size: 0.8rem;
-  }
+/* FOOTER */
+footer {
+  grid-area: footer;
+  background: black;
+  color: white;
+  padding: 2em;
 }
 
-.felsorolas li {
-  list-style-type: disc;
-  text-align: left;
-  margin-left: 80px;
+@media (max-width: 800px) {
+  body {
+    grid-template-columns: auto 1fr;
+  }
+  aside {
+    padding: 4%;
+    text-align: justify;
+  }
 }
