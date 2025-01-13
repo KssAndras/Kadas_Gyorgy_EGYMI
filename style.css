@@ -146,11 +146,11 @@ aside a {
 
 @media (max-width: 768px) {
   aside img {
-    width: 80px; /* Kép szélessége mobil nézetben */
+    width: 90px; /* Kép szélessége mobil nézetben */
     padding: 5px; /* Belülről távolság hozzáadása */
   }
   aside h3 {
-    font-size: 0.8rem;
+    font-size: 10px;
   }
 }
 
@@ -162,9 +162,9 @@ footer {
   padding: 2em;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   body {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 120px;
   }
   aside {
     padding: 10%;
