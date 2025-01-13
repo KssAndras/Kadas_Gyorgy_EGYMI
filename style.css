@@ -3,12 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Fontos: Padding és border beleszámít a méretbe */
-}
-
-html,
-body {
-  overflow-x: hidden; /* Megakadályozza a vízszintes görgetést */
 }
 
 body {
@@ -32,7 +26,6 @@ nav {
   display: flex; /* Flexbox bekapcsolása */
   justify-content: center; /* Elemek középre igazítása vízszintesen */
   align-items: center; /* Függőleges középre igazítás */
-  padding: 10px; /* Belülről távolság hozzáadása */
   gap: 5px; /* Az elemek közötti távolság szabályozása */
 }
 
@@ -128,6 +121,12 @@ aside {
   padding: 4%;
   border-left: solid 0.5px #2c3e503a;
 }
+aside h3 {
+  font-size: 1rem;
+}
+aside p {
+  font-size: 1rem;
+}
 aside hr {
   border: none;
   height: 1px;
@@ -149,6 +148,9 @@ aside a {
   aside img {
     width: 100px; /* Kép szélessége mobil nézetben */
     padding: 10px; /* Belülről távolság hozzáadása */
+  }
+  aside h3 {
+    font-size: 1rem;
   }
 }
 
