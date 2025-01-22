@@ -3,14 +3,18 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  background-color: rgb(248, 237, 224);
+  padding: 0 15%;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 250px;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
+    "navbar navbar"
     "navbar navbar"
     "main sidebar"
     "footer footer";
@@ -30,18 +34,28 @@ hr {
   aside {
     padding: 10%;
   }
+  body {
+    padding: 0 1%;
+  }
 }
 /* NAVBÁR */
 
 nav {
+  padding-top: 50px;
   top: 0;
-  position: sticky;
   grid-area: navbar;
   background-color: rgb(202, 167, 114);
-  display: flex; /* Flexbox bekapcsolása */
-  justify-content: center; /* Elemek középre igazítása vízszintesen */
-  align-items: center; /* Függőleges középre igazítás */
-  gap: 5px; /* Az elemek közötti távolság szabályozása */
+  display: flex;
+  flex-direction: column; /* Függőleges irányú elrendezés */
+  align-items: center; /* Középre igazítás vízszintesen */
+  z-index: 1; /* A navigációs sáv marad felül */
+}
+
+nav .nav-links {
+  display: flex; /* Menüpontok vízszintes elrendezése */
+  justify-content: center; /* Középre igazítás vízszintesen */
+  flex-wrap: wrap; /* Tördelés kisebb képernyőkön */
+  gap: 10px; /* Távolság a menüpontok között */
 }
 
 nav a {
@@ -55,34 +69,52 @@ nav a {
 nav a:hover {
   background-color: rgba(0, 0, 0, 0.2); /* Hover effekt */
 }
-/* Mobil változat */
+
+.nav-image {
+  width: 100%; /* Teljes szélesség */
+  position: sticky; /* Sticky pozíció */
+  top: 50px; /* A navigációs sáv magasságának megfelelő távolság */
+  z-index: 0; /* Hátul marad a navigációhoz képest */
+}
+
+.nav-image img {
+  width: 100%; /* A kép kitölti a konténert */
+  height: auto; /* Megőrzi az arányokat */
+}
+
+/* Mobil változatok */
 @media (max-width: 1100px) {
   nav {
     width: 100%;
-    flex-direction: column; /* Elemek egymás alá kerülnek */
-    gap: 2px; /* Kisebb távolság az elemek között */
+    padding-top: 0;
   }
 
-  nav a {
-    padding: 2px; /* Nagyobb méretű linkek mobilon */
-    text-align: center; /* Szöveg középre igazítása */
+  nav .nav-links {
+    flex-direction: column; /* Menüpontok egymás alá kerülnek */
+    gap: 5px;
   }
 }
+
 @media (max-width: 500px) {
   nav {
     position: static;
   }
+
+  nav a {
+    text-align: center; /* Szöveg középre igazítása mobilon */
+    padding: 5px 0;
+  }
 }
+
 /* MAIN BODY */
 
 main {
+  background-color: #ffffff;
   grid-area: main;
 }
-.welcome img {
-  width: 100%; /* A kép szélessége kitölti a szülőt */
-  height: auto; /* Magasság automatikusan igazodik, hogy megőrizze az arányokat */
-}
+
 .welcome h1 {
+  padding-top: 5%;
   font-size: 2rem;
   text-align: center;
 }
@@ -218,5 +250,3 @@ footer {
   bottom: 0;
   transition: bottom 0.1s ease-in;
 }
-
-
