@@ -44,7 +44,7 @@ nav {
   padding-top: 50px;
   top: 0;
   grid-area: navbar;
-  background-color: rgb(202, 167, 114);
+  background-image: linear-gradient(to right, #ba7f53, #d8b1a4);
   display: flex;
   flex-direction: column; /* Függőleges irányú elrendezés */
   align-items: center; /* Középre igazítás vízszintesen */
